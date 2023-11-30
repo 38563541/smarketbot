@@ -1,0 +1,8 @@
+prefix=/home/lichi/smarketbot/devel
+
+Name: idk1
+Description: Description of idk1
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

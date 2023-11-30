@@ -1,0 +1,2 @@
+idk1
+-DCATKIN_DEVEL_PREFIX=/home/lichi/smarketbot/devel -DCMAKE_INSTALL_PREFIX=/home/lichi/smarketbot/install -G Unix Makefiles
