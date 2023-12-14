@@ -8,7 +8,8 @@
 
 # modified environment variables
 export CMAKE_PREFIX_PATH="/home/lichi/smarketbot/devel:$CMAKE_PREFIX_PATH"
-export PATH='/opt/ros/noetic/bin:/opt/gcc-arm-none-eabi-9-2020-q2-update/bin:/home/lichi/.local/bin:/opt/gcc-arm-none-eabi-9-2020-q2-update/bin:/home/lichi/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+export LD_LIBRARY_PATH="/home/lichi/smarketbot/devel/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/home/lichi/smarketbot/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/home/lichi/smarketbot/build'
-export ROSLISP_PACKAGE_DIRECTORIES="/home/lichi/smarketbot/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
-export ROS_PACKAGE_PATH='/home/lichi/smarketbot/src:/home/lichi/Iris-with-Husky-Simulation/src:/opt/ros/noetic/share'
+export ROSLISP_PACKAGE_DIRECTORIES='/home/lichi/smarketbot/devel/share/common-lisp'
+export ROS_PACKAGE_PATH="/home/lichi/smarketbot/src:$ROS_PACKAGE_PATH"

@@ -111,6 +111,11 @@ catkin_package(
 catkin_install_python(PROGRAMS src/idk.py
   DESTINATION $[CATKIN_PACKAGE_BIN_DESTINATION]
 )
+
+catkin_install_python(PROGRAMS src/result_read.py
+  
+  DESTINATION $[CATKIN_PACKAGE_BIN_DESTINATION]
+)
 ###########
 ## Build ##
 ###########

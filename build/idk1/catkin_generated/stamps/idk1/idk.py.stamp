@@ -8,6 +8,7 @@ By moving MARS to the position and getting its coordinate from "rostopic echo /a
 '''
 
 import rospy
+from move_base_msgs.msg import MoveBaseActionResult
 from move_base_msgs.msg import MoveBaseActionGoal
 
 def move():
@@ -28,20 +29,31 @@ def move():
         # raw_input("Press Enter to continue...")
         print("room1")
         cmd.goal.target_pose.header.frame_id = 'map'
-        cmd.goal.target_pose.pose.position.x = 0.05
-        cmd.goal.target_pose.pose.position.y = 0.08177573062447618
-        cmd.goal.target_pose.pose.orientation.z = 0.25496976673834454
-        cmd.goal.target_pose.pose.orientation.w = 0.9669490255692873
+        cmd.goal.target_pose.pose.position.x = 2
+        cmd.goal.target_pose.pose.position.y = 5
+        cmd.goal.target_pose.pose.orientation.z = 6
+        cmd.goal.target_pose.pose.orientation.w = 4
         velocity_publisher.publish(cmd)
         rospy.loginfo('is sending msg...')
         rate.sleep()
         #input("Press Enter to continue...")
 
-        
+def callback(data):
+    text = data.status.text
+    rospy.loginfo(f"Text: {text}")
+    print(text)
+
+def subscriber_node():
+    print("read gogo")
+    rospy.init_node('result_read', anonymous=True)
+    rospy.Subscriber("/move_base/result", MoveBaseActionResult, callback)
+    rospy.spin()       
 #################################################################
 
 if __name__ == '__main__':
     try:
         #Testing our function
         move()
+        subscriber_node()
+
     except rospy.ROSInterruptException: pass
