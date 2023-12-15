@@ -22,21 +22,27 @@ def move():
 
     #Receiveing the user's input
     print("Let's move your marslite.")
+    x = int(input("input x"))
+    y = int(input("input y"))
+    z = int(input("input z"))
+    w = int(input("input w"))
+    print(x,y,z,w)
 
     while not rospy.is_shutdown():
 
         rospy.sleep(2.)
         # raw_input("Press Enter to continue...")
-        print("room1")
+        print("sending")
         cmd.goal.target_pose.header.frame_id = 'map'
-        cmd.goal.target_pose.pose.position.x = 2
-        cmd.goal.target_pose.pose.position.y = 5
-        cmd.goal.target_pose.pose.orientation.z = 6
-        cmd.goal.target_pose.pose.orientation.w = 4
+        cmd.goal.target_pose.pose.position.x = x
+        cmd.goal.target_pose.pose.position.y = y
+        cmd.goal.target_pose.pose.orientation.z = z
+        cmd.goal.target_pose.pose.orientation.w = w
         velocity_publisher.publish(cmd)
+        print(type(cmd.goal.target_pose.pose.position.x))
         rospy.loginfo('is sending msg...')
         rate.sleep()
-        #input("Press Enter to continue...")
+        input("Press Enter to continue...")
 
 def callback(data):
     text = data.status.text

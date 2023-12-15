@@ -53,10 +53,14 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/$[CATKIN_PACKAGE_BIN_DESTINATION]" TYPE PROGRAM FILES "/home/lichi/smarketbot/build/idk1/catkin_generated/installspace/idk.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/idk1" TYPE PROGRAM FILES "/home/lichi/smarketbot/build/idk1/catkin_generated/installspace/idk.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/$[CATKIN_PACKAGE_BIN_DESTINATION]" TYPE PROGRAM FILES "/home/lichi/smarketbot/build/idk1/catkin_generated/installspace/result_read.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/idk1" TYPE PROGRAM FILES "/home/lichi/smarketbot/build/idk1/catkin_generated/installspace/result_read.py")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/idk1" TYPE PROGRAM FILES "/home/lichi/smarketbot/build/idk1/catkin_generated/installspace/idk_withclass.py")
 endif()
 

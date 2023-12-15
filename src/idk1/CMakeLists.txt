@@ -108,14 +108,11 @@ catkin_package(
 #  CATKIN_DEPENDS roscpp rospy std_msgs
 #  DEPENDS system_lib
 )
-catkin_install_python(PROGRAMS src/idk.py
-  DESTINATION $[CATKIN_PACKAGE_BIN_DESTINATION]
+catkin_install_python(
+  PROGRAMS src/idk.py src/result_read.py src/idk_withclass.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
-catkin_install_python(PROGRAMS src/result_read.py
-  
-  DESTINATION $[CATKIN_PACKAGE_BIN_DESTINATION]
-)
 ###########
 ## Build ##
 ###########
@@ -211,3 +208,4 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+## is used, also find other catkin packages

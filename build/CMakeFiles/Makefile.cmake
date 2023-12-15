@@ -19,6 +19,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/lichi/smarketbot/src/idk1/CMakeLists.txt"
   "/home/lichi/smarketbot/src/idk1/package.xml"
   "/home/lichi/smarketbot/src/idk1/src/idk.py"
+  "/home/lichi/smarketbot/src/idk1/src/idk_withclass.py"
   "/home/lichi/smarketbot/src/idk1/src/result_read.py"
   "/opt/ros/noetic/share/catkin/cmake/all.cmake"
   "/opt/ros/noetic/share/catkin/cmake/assert.cmake"
